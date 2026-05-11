@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0d1117;
+    color: #f0f6fc;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    border-bottom: 1px solid #30363d;
+    padding: 15px 0;
+    background-color: #0d1117;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__list a {
+    text-decoration: none;
+    color: #8b949e;
+    transition: 0.3s;
+}
+
+.nav__list a:hover {
+    color: #00f2ff;
+}
+
+.menu-toggle,
+.menu-btn {
+    display: none;
+}
+
+.hero {
+    padding: 100px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 0.7)), url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #00f2ff;
+    color: #0d1117;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section-title {
+    text-align: center;
+    margin: 50px 0 30px;
+    color: #ffffff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #00f2ff;
+    transform: translateY(-5px);
+}
+
+.card__img {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card__info {
+    padding: 20px;
+}
+
+.card__info h3 {
+    color: #00f2ff;
+    margin-top: 0;
+}
+
+.footer {
+    background-color: #161b22;
+    border-top: 1px solid #30363d;
+    padding: 60px 0 20px;
+    margin-top: 60px;
+    color: #8b949e;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer__col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer__col h3 {
+    color: #ffffff;
+    border-left: 3px solid #00f2ff;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.footer__nav {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__nav li {
+    margin-bottom: 10px;
+}
+
+.footer__nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+.footer__nav a:hover {
+    color: #00f2ff;
+}
+
+.footer__copy {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #30363d;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+/* Form styles */
+.reg-form-section {
+    padding: 40px 0;
+}
+
+.reg-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.reg-form fieldset {
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    background-color: #161b22;
+}
+
+.reg-form legend {
+    color: #00f2ff;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.reg-form p {
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reg-form label {
+    color: #8b949e;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.reg-form input[type="text"],
+.reg-form input[type="tel"],
+.reg-form input[type="email"],
+.reg-form select {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    color: #f0f6fc;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.reg-form input[type="text"]:focus,
+.reg-form input[type="tel"]:focus,
+.reg-form input[type="email"]:focus,
+.reg-form select:focus {
+    border-color: #00f2ff;
+    outline: none;
+}
+
+.reg-form select {
+    cursor: pointer;
+}
+
+.reg-form input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reg-form input[type="submit"]:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 101;
+    }
+
+    .menu-btn span,
+    .menu-btn span::before,
+    .menu-btn span::after {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transition: 0.3s;
+    }
+
+    .menu-btn span {
+        top: 9px;
+    }
+
+    .menu-btn span::before {
+        content: "";
+        top: -9px;
+    }
+
+    .menu-btn span::after {
+        content: "";
+        top: 9px;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: #0d1117;
+        padding: 80px 30px;
+        transition: 0.4s;
+        border-left: 1px solid #30363d;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .menu-toggle:checked~.nav {
+        right: 0;
+    }
+
+    .menu-toggle:checked~.menu-btn span {
+        background: transparent;
+    }
+
+    .menu-toggle:checked~.menu-btn span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .menu-toggle:checked~.menu-btn span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .footer__inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__col h3 {
+        border-left: none;
+        border-bottom: 2px solid #00f2ff;
+        display: inline-block;
+        padding: 0 0 5px 0;
+    }
+
+    /* Form mobile styles */
+    .reg-form fieldset {
+        padding: 15px !important;
+    }
+
+    .reg-form input[type="text"],
+    .reg-form input[type="tel"],
+    .reg-form input[type="email"],
+    .reg-form select {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .reg-form label {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin: 30px 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}

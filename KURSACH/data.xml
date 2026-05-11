@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vitafit>
+    <previews>
+        <section id="gym">
+            <title>Тренажерный зал</title>
+            <short>Профессиональное оборудование для силового тренинга.</short>
+            <image>images/gym.jpg</image>
+            <link>gym.html</link>
+        </section>
+        <section id="pool">
+            <title>Бассейн</title>
+            <short>25-метровый бассейн с современной системой очистки.</short>
+            <image>images/pool.jpg</image>
+            <link>pool.html</link>
+        </section>
+        <section id="fitness">
+            <title>Фитнес</title>
+            <short>Групповые занятия для любого уровня подготовки.</short>
+            <image>images/fitness.jpg</image>
+            <link>fitness.html</link>
+        </section>
+    </previews>
+    <news>
+        <item>
+            <date>20 мая 2026</date>
+            <title>Новая студия йоги</title>
+            <text>Открытие панорамного зала для практик.</text>
+        </item>
+        <item>
+            <date>18 мая 2026</date>
+            <title>Летняя акция</title>
+            <text>Скидка 20% на годовые абонементы до конца месяца.</text>
+        </item>
+        <item>
+            <date>15 мая 2026</date>
+            <title>Марафон здоровья</title>
+            <text>Присоединяйтесь к бесплатному забегу в это воскресенье!</text>
+        </item>
+    </news>
+</vitafit>

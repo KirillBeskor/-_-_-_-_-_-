@@ -1,0 +1,324 @@
+$color-bg: #0d1117;
+$color-card: #161b22;
+$color-accent: #00f2ff;
+$color-text: #f0f6fc;
+$color-muted: #8b949e;
+$color-border: #30363d;
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin section-padding {
+    padding: 60px 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $color-bg;
+    color: $color-text;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    border-bottom: 1px solid $color-border;
+    padding: 15px 0;
+    background-color: $color-bg;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    &__inner {
+        @include flex-between;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .nav__list {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+
+        a {
+            text-decoration: none;
+            color: $color-muted;
+            transition: 0.3s;
+
+            &:hover {
+                color: $color-accent;
+            }
+        }
+    }
+}
+
+.menu-toggle,
+.menu-btn {
+    display: none;
+}
+
+.rules-hero {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/rules.jpg') center/cover;
+
+    h1 {
+        font-size: 3rem;
+        margin: 0;
+        color: #fff;
+    }
+
+    p {
+        color: $color-muted;
+        margin-top: 10px;
+    }
+}
+
+.section-title {
+    margin: 40px 0 30px;
+    border-left: 4px solid $color-accent;
+    padding-left: 15px;
+    font-size: 1.8rem;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+
+    .rules-col {
+        h3 {
+            color: $color-accent;
+            margin-top: 0;
+        }
+
+        ul,
+        ol {
+            color: $color-muted;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .list-heading {
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.rules-section {
+    @include section-padding;
+
+    &--dark {
+        background-color: $color-card;
+        padding: 40px;
+        border-radius: 12px;
+        border: 1px solid $color-border;
+    }
+}
+
+.simple-list {
+    list-style: square;
+    color: $color-muted;
+    padding-left: 40px;
+
+    li {
+        margin-bottom: 15px;
+    }
+}
+
+.rules-contact {
+    @include section-padding;
+    text-align: center;
+
+    .contact-box {
+        padding: 60px 20px;
+        border: 1px dashed $color-accent;
+        border-radius: 15px;
+        background-color: $color-card;
+    }
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: $color-accent;
+    color: $color-bg;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.footer {
+    background-color: $color-card;
+    border-top: 1px solid $color-border;
+    padding: 60px 0 20px;
+    margin-top: 80px;
+    color: $color-muted;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__col {
+        flex: 1;
+        min-width: 250px;
+
+        h3 {
+            color: #fff;
+            border-left: 3px solid $color-accent;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                color: $color-accent;
+            }
+        }
+    }
+
+    &__copy {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid $color-border;
+        padding-top: 20px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 101;
+
+        span,
+        span::before,
+        span::after {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transition: 0.3s;
+        }
+
+        span {
+            top: 9px;
+
+            &::before {
+                content: "";
+                top: -9px;
+            }
+
+            &::after {
+                content: "";
+                top: 9px;
+            }
+        }
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: $color-bg;
+        padding: 80px 30px;
+        transition: 0.4s;
+        border-left: 1px solid $color-border;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .menu-toggle:checked ~ .nav {
+        right: 0;
+    }
+
+    .menu-toggle:checked ~ .menu-btn span {
+        background: transparent;
+    }
+
+    .menu-toggle:checked ~ .menu-btn span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .menu-toggle:checked ~ .menu-btn span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .rules-hero h1 {
+        font-size: 2rem;
+    }
+
+    .footer {
+        &__inner {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__col h3 {
+            border-left: none;
+            border-bottom: 2px solid $color-accent;
+            display: inline-block;
+            padding: 0 0 5px 0;
+        }
+    }
+}

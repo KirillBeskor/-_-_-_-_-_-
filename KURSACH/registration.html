@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация — ВитаФит</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+
+<body id="top">
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="home.html" class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f2ff" stroke-width="2">
+                        <path
+                            d="M20.42 4.58a5 5 0 0 1 0 7.07l-7.07 7.07a1 1 0 0 1-1.42 0L4.86 11.65a5 5 0 1 1 7.07-7.07l.35.35.35-.35a5 5 0 0 1 7.07 0z" />
+                    </svg>
+                    <span>ВитаФит Комплекс</span>
+                </a>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-btn">
+                    <span></span>
+                </label>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="gym.html">Тренажерный зал</a></li>
+                        <li><a href="pool.html">Бассейн</a></li>
+                        <li><a href="fitness.html">Фитнес</a></li>
+                        <li><a href="#footer">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="reg-form-section">
+            <h1 class="section-title">Анкета клиента</h1>
+
+            <form action="#" method="post" class="reg-form" id="regForm">
+                <fieldset style="border: 1px solid #30363d; padding: 25px; border-radius: 12px;">
+                    <legend style="color: #00f2ff; padding: 0 10px; font-weight: bold;">Регистрация в комплексе</legend>
+
+                    <p>
+                        <label for="fname">Имя клиента:</label>
+                        <input type="text" id="fname" name="firstname" required>
+                    </p>
+
+                    <p>
+                        <label for="lname">Фамилия клиента:</label>
+                        <input type="text" id="lname" name="lastname" required>
+                    </p>
+
+                    <p>
+                        <label for="service">Направление занятий:</label>
+                        <select id="service" name="service">
+                            <option value="chooseClass">Выберите направление</option>
+                            <option value="gym">Тренажерный зал</option>
+                            <option value="pool">Бассейн</option>
+                            <option value="fitness">Фитнес</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="age">Возрастная группа:</label>
+                        <select id="age" name="age-group">
+                            <option value="chooseAge">Выберите возраст</option>
+                            <option value="kids">дети 6 - 12 лет</option>
+                            <option value="teens">подростки 13 - 17 лет</option>
+                            <option value="adults">взрослые 18 - 60 лет</option>
+                            <option value="senior">пожилые 60+</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="phone">Номер телефона:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+375 (__) ___-__-__" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Электронная почта:</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    </p>
+
+                    <p style="text-align: center; margin-top: 20px;">
+                        <input type="submit" value="Зарегистрироваться" class="btn-primary">
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <section class="footer__col">
+                    <h3>Контакты</h3>
+                    <p>&#128205; пр. Победителей, 103</p>
+                    <p> &#128222; +375 (29) 000-00-00</p>
+                    <p> &#128231; info@vitafit.by</p>
+                </section>
+                <section class="footer__col">
+                    <h3>Режим работы</h3>
+                    <p>Пн — Пт: <strong>07:00 – 23:00</strong></p>
+                    <p>Сб — Вс: <strong>09:00 – 21:00</strong></p>
+                </section>
+                <section class="footer__col">
+                    <h3>Навигация</h3>
+                    <ul class="footer__nav">
+                        <li><a href="#top">Наверх</a></li>
+                        <li><a href="home.html">Главная</a></li>
+                        <li><a href="gym.html">Тренажерный зал</a></li>
+                        <li><a href="pool.html">Бассейн</a></li>
+                        <li><a href="fitness.html">Фитнес</a></li>
+                        <li><a href="rules.html">Правила и политика комплекса</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="footer__copy">
+                <p>&#169; Бескоровайный Кирилл Алексеевич 6ПИ 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('regForm').onsubmit = function () {
+            alert('Заявка успешно отправлена! Мы свяжемся с вами.');
+            return false;
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0d1117;
+    color: #f0f6fc;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    border-bottom: 1px solid #30363d;
+    padding: 15px 0;
+    background-color: #0d1117;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__list a {
+    text-decoration: none;
+    color: #8b949e;
+    transition: 0.3s;
+}
+
+.nav__list a:hover {
+    color: #00f2ff;
+}
+
+.menu-toggle,
+.menu-btn {
+    display: none;
+}
+
+.fitness-hero {
+    padding: 100px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 0.8)), url('../images/fitness.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 60px;
+}
+
+.fitness-hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+.class-card {
+    background-color: #161b22;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    transition: 0.3s;
+}
+
+.class-card h3 {
+    color: #00f2ff;
+    margin-top: 0;
+}
+
+.class-card p {
+    color: #8b949e;
+    font-size: 0.95rem;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin-bottom: 80px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #161b22;
+    min-width: 600px;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #30363d;
+}
+
+.schedule-table th {
+    background-color: #1c2128;
+    color: #00f2ff;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.join-card {
+    background-color: #161b22;
+    padding: 60px 20px;
+    border-radius: 15px;
+    border: 1px solid #30363d;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.join-card h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.join-card p {
+    color: #8b949e;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #00f2ff;
+    color: #0d1117;
+    padding: 15px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer {
+    background-color: #161b22;
+    border-top: 1px solid #30363d;
+    padding: 60px 0 20px;
+    color: #8b949e;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer__col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer__col h3 {
+    color: #ffffff;
+    border-left: 3px solid #00f2ff;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.footer__nav {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__nav li {
+    margin-bottom: 10px;
+}
+
+.footer__nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+.footer__nav a:hover {
+    color: #00f2ff;
+}
+
+.footer__copy {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #30363d;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 101;
+    }
+
+    .menu-btn span,
+    .menu-btn span::before,
+    .menu-btn span::after {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transition: 0.3s;
+    }
+
+    .menu-btn span {
+        top: 9px;
+    }
+
+    .menu-btn span::before {
+        content: "";
+        top: -9px;
+    }
+
+    .menu-btn span::after {
+        content: "";
+        top: 9px;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: #0d1117;
+        padding: 80px 30px;
+        transition: 0.4s;
+        border-left: 1px solid #30363d;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .menu-toggle:checked~.nav {
+        right: 0;
+    }
+
+    .menu-toggle:checked~.menu-btn span {
+        background: transparent;
+    }
+
+    .menu-toggle:checked~.menu-btn span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .menu-toggle:checked~.menu-btn span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .fitness-hero h1 {
+        font-size: 2rem;
+    }
+
+    .footer__inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__col h3 {
+        border-left: none;
+        border-bottom: 2px solid #00f2ff;
+        display: inline-block;
+        padding: 0 0 5px 0;
+    }
+}
